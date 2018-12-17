@@ -16,7 +16,7 @@
       <div class="left-column">Color Family</div>
       <div class="right-column">
         <p>Blue</p>
-        <div class="color-list">
+        <div class="selection-list">
           <span class="color-item" style="borderColor: #f57224"></span>
           <span class="color-item"></span>
           <span class="color-item"></span>
@@ -28,14 +28,24 @@
     <div class="flex-container">
       <div class="left-column">Size</div>
       <div class="right-column">
-        <div>Int</div>
-        <div>years</div>
+        <p>Int</p>
+        <div class="selection-list">
+          <div class="size-item" style="borderColor: #f57224">7-8 yrs</div>
+          <div class="size-item">9-10 yrs</div>
+          <div class="size-item">11-12 yrs</div>
+          <div class="size-item">5-6 yrs</div>
+          <div class="size-item">3-4 yrs</div>
+        </div>
       </div>
     </div>
     <!-- qty -->
     <div class="flex-container">
       <div class="left-column">Quantity</div>
-      <div class="right-column">qty</div>
+      <div class="right-column">
+        <span>-</span>
+        <span>1</span>
+        <span>+</span>
+      </div>
     </div>
     <div>
       <button>Buy Now</button>
@@ -110,7 +120,7 @@ export default {
 .right-column{
   font-size: 14px;
 }
-.color-list{
+.selection-list{
   display: flex;
   margin-top: 8px;
 }
@@ -126,5 +136,18 @@ export default {
 }
 .color-item:hover{
   border-color: #f57224;
+}
+.size-item{
+  height: 32px;
+  font-size: 12px;
+  padding: 0 8px;
+  margin-right: 8px;
+  border: 1px solid #dadada;
+  display: flex;
+  align-items: center;
+}
+.size-item:hover{
+  border-color: #f57224;
+  cursor: pointer;
 }
 </style>
