@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <p>Global Collection Kids Girls Chiffon Lace Princess </p>
-    <p>Wedding Bridesmaid Pageant Party Formal </p>
-    <p>Dresses</p>
-    <div>
-        <span> 5 stars </span><span> 22 Ratings </span><span> share </span><span> heart </span>
+  <div class="product">
+    <h1 class="product-title">Kids Girls Chiffon Lace Princess Wedding Bridesmaid Pageant Party Formal Dresses</h1>
+    <div class="rating">
+        <span class="star">5 stars</span><a href="#">22 Ratings</a>
+        <span class="spacer"></span>
+        <i class="fas fa-share-alt"></i><i class="far fa-heart" style="marginLeft: 23px"></i>
     </div>
     <div>
         <span>Brand: </span><span> OEM | More Girls from OEM</span>
@@ -51,4 +51,25 @@ export default {
 </script>
 
 <style>
+.product{
+  width: 520px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.product-title{
+  font-size: 22px;
+  margin-top: 13px;
+  margin-bottom: 11px;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  height: 29px;
+}
+.star{
+  margin-right: 5px;
+}
+.fas, .far{
+  color: #757575;
+}
 </style>

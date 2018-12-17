@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shipping">
     <p><span>Delivery option</span><span>Icon</span></p>
     <p><span>icon</span><span>Wp Kuala Lumpur,Kuala Lumpur,50450</span><span>CHANGE</span></p>
     <p><span>icon</span><span>Ships from Overseas</span></p>
@@ -58,4 +58,7 @@ export default {
 </script>
 
 <style>
+.shipping{
+  width: 330px;
+}
 </style>

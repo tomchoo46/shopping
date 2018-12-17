@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="container">
-      <img src="" alt="">
+      <div class="image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Music_01754.jpg" alt="Product">
+      </div>
       <product-detail></product-detail>
       <shipping-info></shipping-info>
     </div>
@@ -22,4 +24,25 @@ export default {
 </script>
 
 <style>
+#app{
+  background-color: #eff0f5;
+  height: 100%;
+}
+.container{
+  width: 1188px;
+  display: flex;
+  margin: auto;
+  background-color: white;
+  height: 100%;
+}
+.image{
+  width: 330px;
+  height: 330px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+img{
+  max-width: 100%;
+}
 </style>

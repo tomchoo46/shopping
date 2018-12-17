@@ -1,0 +1,10 @@
+a{
+  color: #1a9cb7;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.spacer{
+  flex: 1 1 auto;
+}
