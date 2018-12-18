@@ -30,3 +30,6 @@ a:hover{
 .bottom-border{
   border-bottom: 1px solid #eff0f5;
 }
+.right-border{
+  border-right: 1px solid #eff0f5;
+}

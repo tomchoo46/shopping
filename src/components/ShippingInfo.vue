@@ -46,25 +46,29 @@
       </div>
     </div>
     <div class="shipping-container">
-      <div class="sold-by-header">
+      <div class="seller bottom-border">
         <div>
-          <p>Sold by</p>
-          <p>MM88 Store</p>
+          <p class="grey-text">Sold by</p>
+          <p class="store-name">MM88 Store</p>
         </div>
-        <span>icon</span>
+        <span class="spacer"></span>
+        <span class="chat">
+          <i class="far fa-comments"></i>
+          <span class="font-14">&nbsp;Chat</span>
+        </span>
       </div>
-      <div style="display: flex">
-        <div class="info">
-          <p>Positive Seller Ratings</p>
-          <p>82%</p>
+      <div class="bottom-border" style="display: flex">
+        <div class="seller-info right-border">
+          <p class="grey-text title">Positive Seller Ratings</p>
+          <p class="rating" style="color: #6abf67">82%</p>
         </div>
-        <div class="info">
-          <p>Ship on Time</p>
-          <p>83%</p>
+        <div class="seller-info right-border">
+          <p class="grey-text title">Ship on Time</p>
+          <p class="rating">83%</p>
         </div>
-        <div class="info">
-          <p>Chat Response Rate</p>
-          <p>95%</p>
+        <div class="seller-info">
+          <p class="grey-text title">Chat Response Rate</p>
+          <p class="rating">95%</p>
         </div>
       </div>
       <div class="store-link">
@@ -99,13 +103,10 @@ export default {
   padding: 10px 16px;
   align-items: center;
 }
-.sold-by-header{
+.seller{
   display: flex;
   margin-top: 8px;
   padding: 13px 16px 10px;
-}
-.info{
-  padding: 8px 10px 8px 16px;
 }
 .store-link{
   display: flex;
@@ -113,7 +114,7 @@ export default {
   justify-content: center;
   font-size: 13px;
 }
-.fas{
+.fas,.far{
   font-size: 15px;
 }
 .left-icon{
@@ -122,5 +123,33 @@ export default {
 }
 .address{
   padding-right: 15px;
+}
+.store-name{
+  margin-top: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.chat{
+  width: 85px;
+  display: flex;
+  align-items: center;
+  color: #25a5d8;
+  font-weight: bold; 
+  cursor: pointer;
+}
+.chat i{
+  color: #25a5d8;
+}
+.seller-info{
+  padding: 8px 10px 8px 16px;
+  width: 33.33%;
+  cursor: pointer;
+}
+.seller-info .title{
+  margin-bottom: 20px;
+  height: 28px;
+}
+.seller-info .rating{
+  font-size: 26px;
 }
 </style>
