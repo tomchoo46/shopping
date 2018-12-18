@@ -1,55 +1,65 @@
 <template>
   <div class="shipping">
-    <div class="flex-header">
-      <span>Delivery Options</span>
-      <span class="spacer"></span>
-      <span>Icon</span>
+    <div class="shipping-container">
+      <div class="flex-header">
+        <span class="header-title vertical-center">Delivery Options</span>
+        <span class="spacer"></span>
+        <span><i class="fas fa-info-circle" style="cursor: pointer"></i></span>
+      </div>
+      <div class="flex-container">
+        <span><i class="fas fa-map-marker-alt left-icon"></i></span>
+        <span class="address font-14">Wp Kuala Lumpur,Kuala Lumpur,50450</span>
+        <a>CHANGE</a>
+      </div>
+      <div class="flex-container bottom-border">
+        <span><i class="fas fa-globe-asia left-icon"></i></span>
+        <span class="font-14">Ships from Overseas</span>
+      </div>
+      <div class="flex-container">
+        <span>icon</span>
+        <div>
+          <p>Economy Delivery</p>
+          <p>7 - 24 days</p>
+        </div>
+        <span>RM5.20</span>
+      </div>
+      <div class="flex-container"><span>icon</span><span>Cash on Delivery not available</span></div>
+      <hr>
+      <div class="flex-header"><span class="header-title">Return &amp; Warranty</span><span>Icon</span></div>  
+      <div class="flex-container">
+        <span>icon</span>
+        <div>
+          <p>7 days easy return</p>
+          <p>Change of mind is not applicable</p>
+        </div>
+      </div>
+      <div class="flex-container"><span>icon</span><span>Warranty not available</span></div>
     </div>
-    <div class="flex-container"><span>icon</span><span>Wp Kuala Lumpur,Kuala Lumpur,50450</span><span>CHANGE</span></div>
-    <div class="flex-container"><span>icon</span><span>Ships from Overseas</span></div>
-    <hr>
-    <div class="flex-container">
-      <span>icon</span>
-      <div>
-        <p>Economy Delivery</p>
-        <p>7 - 24 days</p>
+    <div class="shipping-container">
+      <div class="sold-by-header">
+        <div>
+          <p>Sold by</p>
+          <p>MM88 Store</p>
+        </div>
+        <span>icon</span>
       </div>
-      <span>RM5.20</span>
-    </div>
-    <div class="flex-container"><span>icon</span><span>Cash on Delivery not available</span></div>
-    <hr>
-    <div class="flex-header"><span>Return &amp; Warranty</span><span>Icon</span></div>  
-    <div class="flex-container">
-      <span>icon</span>
-      <div>
-        <p>7 days easy return</p>
-        <p>Change of mind is not applicable</p>
+      <div style="display: flex">
+        <div class="info">
+          <p>Positive Seller Ratings</p>
+          <p>82%</p>
+        </div>
+        <div class="info">
+          <p>Ship on Time</p>
+          <p>83%</p>
+        </div>
+        <div class="info">
+          <p>Chat Response Rate</p>
+          <p>95%</p>
+        </div>
       </div>
-    </div>
-    <div class="flex-container"><span>icon</span><span>Warranty not available</span></div>
-    <div class="sold-by-header">
-      <div>
-        <p>Sold by</p>
-        <p>MM88 Store</p>
+      <div class="store-link">
+        <a href="#">GO TO STORE</a>
       </div>
-      <span>icon</span>
-    </div>
-    <div style="display: flex">
-      <div class="info">
-        <p>Positive Seller Ratings</p>
-        <p>82%</p>
-      </div>
-      <div class="info">
-        <p>Ship on Time</p>
-        <p>83%</p>
-      </div>
-      <div class="info">
-        <p>Chat Response Rate</p>
-        <p>95%</p>
-      </div>
-    </div>
-    <div class="store-link">
-      <a href="#">GO TO STORE</a>
     </div>
   </div>
 </template>
@@ -67,6 +77,9 @@ export default {
 .shipping{
   width: 330px;
 }
+.shipping-container{
+  background-color: #fafafa;
+}
 .flex-header{
   display: flex;
   padding: 20px 16px 2px;
@@ -74,6 +87,7 @@ export default {
 .flex-container{
   display: flex;
   padding: 10px 16px;
+  align-items: center;
 }
 .sold-by-header{
   display: flex;
@@ -88,5 +102,15 @@ export default {
   padding: 15px;
   justify-content: center;
   font-size: 13px;
+}
+.fas{
+  font-size: 15px;
+}
+.left-icon{
+  font-size: 18px;
+  padding-right: 10px;
+}
+.address{
+  padding-right: 15px;
 }
 </style>

@@ -6,15 +6,15 @@
         <span class="spacer"></span>
         <i class="fas fa-share-alt"></i><i class="far fa-heart" style="marginLeft: 23px"></i>
     </div>
-    <div class="brand">
+    <div class="brand bottom-border">
         <span class="text">Brand: </span><a>OEM</a><span>&nbsp;|&nbsp;</span><a>Girls from OEM</a>
     </div>
     <p class="price">RM53.00</p>
-    <p class="previous-price"><span style="textDecoration: line-through" class="text">RM88.40</span> -40%</p>
+    <p class="previous-price font-14 bottom-border"><span style="textDecoration: line-through" class="text font-14">RM88.40</span> -40%</p>
     <!-- color family -->
     <div class="flex-container">
-      <div class="left-column">Color Family</div>
-      <div class="right-column">
+      <div class="left-column font-14">Color Family</div>
+      <div class="font-14">
         <p>Blue</p>
         <div class="selection-list">
           <span class="color-item" style="borderColor: #f57224"></span>
@@ -26,8 +26,8 @@
     </div>
     <!-- size -->
     <div class="flex-container">
-      <div class="left-column">Size</div>
-      <div class="right-column">
+      <div class="left-column font-14">Size</div>
+      <div class="font-14">
         <p>Int</p>
         <div class="selection-list">
           <div class="size-item" style="borderColor: #f57224">7-8 yrs</div>
@@ -40,8 +40,8 @@
     </div>
     <!-- qty -->
     <div class="flex-container">
-      <div class="left-column">Quantity</div>
-      <div class="right-column">
+      <div class="left-column font-14">Quantity</div>
+      <div class="font-14">
         <span>-</span>
         <span>1</span>
         <span>+</span>
@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .product{
   width: 520px;
   box-sizing: border-box;
@@ -84,7 +84,6 @@ export default {
   margin-right: 5px;
 }
 .fas, .far{
-  color: #757575;
   font-size: 18px;
   cursor: pointer;
 }
@@ -94,19 +93,14 @@ export default {
 .brand{
   line-height: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eff0f5;
 }
 .price{
   color: #f57224;
   font-size: 30px;
   padding-top: 16px;
 }
-.previous-price, .previous-price span{
-  font-size: 14px;
-}
 .previous-price{
   padding-bottom: 17px;
-  border-bottom: 1px solid #eff0f5;
 }
 .flex-container{
   display: flex;
@@ -115,10 +109,6 @@ export default {
 .left-column{
   width: 92px;
   color: #757575;
-  font-size: 14px;
-}
-.right-column{
-  font-size: 14px;
 }
 .selection-list{
   display: flex;
