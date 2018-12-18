@@ -34,7 +34,7 @@
         <p>{{userData.selectedColor}}</p>
         <div class="selection-list">
           <span class="color-item" 
-            :style="isSelected(color)"
+            :style="isSelectedColor(color)"
             v-for="color in product.colorFamilies" 
             :key="color"
             @click="selectColor(color)">{{color}}</span>
@@ -47,11 +47,11 @@
       <div class="font-14">
         <p>Int</p>
         <div class="selection-list">
-          <div class="size-item" style="borderColor: #f57224">7-8 yrs</div>
-          <div class="size-item">9-10 yrs</div>
-          <div class="size-item">11-12 yrs</div>
-          <div class="size-item">5-6 yrs</div>
-          <div class="size-item">3-4 yrs</div>
+          <div class="size-item" 
+            :style="isSelectedSize(size)"
+            v-for="size in product.sizes" 
+            :key="size"
+            @click="selectSize(size)"><p>{{size}} yrs</p></div>
         </div>
       </div>
     </div>
@@ -89,13 +89,20 @@ export default {
   },
   created(){
     this.$store.dispatch('setProductColor', this.product.colorFamilies[0])  //initialize first color of product
+    this.$store.dispatch('setProductSize', this.product.sizes[0])  //initialize first size of product
   },
   methods: {
     selectColor(color){
       this.$store.dispatch('setProductColor', color)
     },
-    isSelected(color){
+    isSelectedColor(color){
       return color === this.userData.selectedColor ? { borderColor: '#f57224' } : null
+    },
+    selectSize(size){
+      this.$store.dispatch('setProductSize', size)
+    },
+    isSelectedSize(size){
+      return size === this.userData.selectedSize ? { borderColor: '#f57224' } : null
     }
   }
 };
