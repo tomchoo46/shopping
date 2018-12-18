@@ -15,17 +15,29 @@ export const store = new Vuex.Store({
         price: 53.00,
         originalPrice: 88.40,
         discount: 40,
-        colorFamily: 'Blue'
+        colorFamilies: ['Blue', 'Green', 'Red', 'Yellow']
       }
-    ]
+    ],
+    userData: {
+      selectedColor: ''
+    }
   },
   mutations: {
+    setProductColor (state, payload) {
+      state.userData.selectedColor = payload
+    },
   },
   actions: {
+    setProductColor({commit}, payload){
+      commit('setProductColor', payload)
+    }
   },
   getters: {
     products(state){
       return state.products
+    },
+    userData(state){
+      return state.userData
     }
   }
 })

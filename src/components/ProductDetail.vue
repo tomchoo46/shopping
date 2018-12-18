@@ -31,12 +31,13 @@
     <div class="flex-container">
       <div class="left-column font-14">Color Family</div>
       <div class="font-14">
-        <p>{{product.colorFamily}}</p>
+        <p>{{userData.selectedColor}}</p>
         <div class="selection-list">
-          <span class="color-item" style="borderColor: #f57224"></span>
-          <span class="color-item"></span>
-          <span class="color-item"></span>
-          <span class="color-item"></span>
+          <span class="color-item" 
+            :style="isSelected(color)"
+            v-for="color in product.colorFamilies" 
+            :key="color"
+            @click="selectColor(color)">{{color}}</span>
         </div>
       </div>
     </div>
@@ -74,12 +75,28 @@
 export default {
   name: "ProductDetail",
   props: [],
+  data (){
+    return{
+    }
+  },
   computed: {
     product(){
       return this.$store.getters.products[0]
+    },
+    userData(){
+      return this.$store.getters.userData
     }
   },
+  created(){
+    this.$store.dispatch('setProductColor', this.product.colorFamilies[0])  //initialize first color of product
+  },
   methods: {
+    selectColor(color){
+      this.$store.dispatch('setProductColor', color)
+    },
+    isSelected(color){
+      return color === this.userData.selectedColor ? { borderColor: '#f57224' } : null
+    }
   }
 };
 </script>
