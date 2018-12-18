@@ -59,9 +59,20 @@
     <div class="flex-container">
       <div class="left-column font-14">Quantity</div>
       <div class="font-14">
-        <button class="btn btn-change-qty"><i class="fas fa-minus"></i></button>
-        <input class="order-qty" type="text" value="1" height="100%">
-        <button class="btn btn-change-qty"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-change-qty"
+          @click="changeOrderQty(parseInt(orderQty)-1)"
+          :class="{btnDisabled: (orderQty <= 1)}">
+          <i class="fas fa-minus"></i>
+        </button>
+        <input class="input-order-qty" 
+          type="text" 
+          height="100%"
+          v-model="orderQty" 
+          @input="changeOrderQty(parseInt(orderQty))"/>
+        <button class="btn btn-change-qty" 
+          @click="changeOrderQty(parseInt(orderQty)+1)">
+          <i class="fas fa-plus"></i>
+        </button>
       </div>
     </div>
     <div>
@@ -77,6 +88,7 @@ export default {
   props: [],
   data (){
     return{
+      orderQty: 1 //use v-model to bind so that any input less than 1 can be resetted to 1
     }
   },
   computed: {
@@ -103,6 +115,15 @@ export default {
     },
     isSelectedSize(size){
       return size === this.userData.selectedSize ? { borderColor: '#f57224' } : null
+    },
+    changeOrderQty(qty){
+      if (qty > 0){
+        this.$store.dispatch('setOrderQty', qty)
+        this.orderQty = this.userData.orderQty
+      } else { //if input less than 1, reset orderQty to 1
+        this.$store.dispatch('setOrderQty', 1)
+        this.orderQty = 1
+      }
     }
   }
 };
@@ -239,10 +260,18 @@ export default {
 .btn-change-qty:focus{
   border: 0;
 }
-.order-qty{
+.input-order-qty{
   text-align: center;
   border: 0;
   width: 44px;
   margin: 0 1px;
+  outline: 0;
+}
+.btnDisabled{
+  cursor: not-allowed;
+  background-color: #fafafa;
+}
+.btnDisabled .fas{
+  color: #dadada;
 }
 </style>

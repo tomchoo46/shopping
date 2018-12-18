@@ -21,7 +21,8 @@ export const store = new Vuex.Store({
     ],
     userData: {
       selectedColor: '',
-      selectedSize: ''
+      selectedSize: '',
+      orderQty: 1
     }
   },
   mutations: {
@@ -30,6 +31,9 @@ export const store = new Vuex.Store({
     },
     setProductSize (state, payload) {
       state.userData.selectedSize = payload
+    },
+    setOrderQty (state, payload) {
+      state.userData.orderQty = payload
     }
   },
   actions: {
@@ -38,7 +42,10 @@ export const store = new Vuex.Store({
     },
     setProductSize({commit}, payload){
       commit('setProductSize', payload)
-    }
+    },
+    setOrderQty({commit}, payload){
+      commit('setOrderQty', payload)
+    },
   },
   getters: {
     products(state){
