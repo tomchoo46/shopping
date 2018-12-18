@@ -28,15 +28,22 @@
         <span><i class="far fa-money-bill-alt left-icon"></i></span>
         <span class="font-14">Cash on Delivery not available</span>
       </div>
-      <div class="flex-header"><span class="header-title">Return &amp; Warranty</span><span>Icon</span></div>  
+      <div class="flex-header">
+        <span class="header-title">Return &amp; Warranty</span>
+        <span class="spacer"></span>
+        <span><i class="fas fa-info-circle" style="cursor: pointer"></i></span>
+      </div>  
       <div class="flex-container">
-        <span>icon</span>
+        <span><i class="fas fa-undo-alt left-icon"></i></span>
         <div>
-          <p>7 days easy return</p>
-          <p>Change of mind is not applicable</p>
+          <p class="font-14">7 days easy return</p>
+          <p class="grey-text">Change of mind is not applicable</p>
         </div>
       </div>
-      <div class="flex-container"><span>icon</span><span>Warranty not available</span></div>
+      <div class="flex-container">
+        <span><i class="fas fa-shield-alt left-icon"></i></span>
+        <span class="font-14">Warranty not available</span>
+      </div>
     </div>
     <div class="shipping-container">
       <div class="sold-by-header">

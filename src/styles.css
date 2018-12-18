@@ -15,7 +15,7 @@ a:hover{
 .header-title{
   color: #757575;
   font-family: Roboto-Medium;
-  font-weight: 500;
+  font-weight: bold;
 }
 .vertical-center{
   display: flex;
