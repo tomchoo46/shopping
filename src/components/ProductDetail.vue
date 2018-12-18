@@ -59,8 +59,8 @@
       </div>
     </div>
     <div>
-      <button>Buy Now</button>
-      <button>Add to Cart</button>
+      <button class="btn btn-buy">Buy Now</button>
+      <button class="btn btn-add-cart">Add to Cart</button>
     </div>
   </div>
 </template>
@@ -153,5 +153,29 @@ export default {
 .size-item:hover{
   border-color: #f57224;
   cursor: pointer;
+}
+.btn{
+  width: 225px;
+  height: 44px;
+  margin-right: 10px;
+  margin-top: 8px;
+  text-align: center;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all .3s ease-out;  
+}
+.btn-buy{
+  background-color: #ffb916;
+}
+.btn-buy:hover{
+  background-color: #e59b11;
+}
+.btn-add-cart{
+  background-color: #f57224;
+}
+.btn-add-cart:hover{
+  background-color: #d0611e;
 }
 </style>
