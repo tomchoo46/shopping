@@ -1,6 +1,6 @@
 <template>
   <div class="product">
-    <h1 class="product-title">Kids Girls Chiffon Lace Princess Wedding Bridesmaid Pageant Party Formal Dresses</h1>
+    <h1 class="product-title">{{product.title}}</h1>
     <div class="rating">
         <span class="star">
           <i class="far fa-star"></i>
@@ -9,24 +9,29 @@
           <i class="far fa-star"></i>
           <i class="far fa-star"></i>
         </span>
-        <a href="#">22 Ratings</a>
+        <a href="#">{{product.rating}} Ratings</a>
         <span class="spacer"></span>
         <i class="fas fa-share-alt"></i>
         <i class="far fa-heart" style="marginLeft: 23px"></i>
     </div>
     <div class="brand bottom-border">
-        <span class="grey-text">Brand: </span><a>OEM</a><span>&nbsp;|&nbsp;</span><a>Girls from OEM</a>
+        <span class="grey-text">Brand: </span>
+        <a>{{product.brands[0]}}</a>
+        <span>&nbsp;|&nbsp;</span>
+        <a>{{product.brands[1]}}</a>
     </div>
-    <p class="price">RM53.00</p>
+    <p class="price">RM{{product.price | decimal}}</p>
     <p class="previous-price font-14 bottom-border">
-      <span style="textDecoration: line-through" class="grey-text font-14">RM88.40</span> 
-      -40%
+      <span style="textDecoration: line-through" class="grey-text font-14">
+        RM{{product.originalPrice | decimal}}
+      </span> 
+      -{{product.discount}}%
     </p>
     <!-- color family -->
     <div class="flex-container">
       <div class="left-column font-14">Color Family</div>
       <div class="font-14">
-        <p>Blue</p>
+        <p>{{product.colorFamily}}</p>
         <div class="selection-list">
           <span class="color-item" style="borderColor: #f57224"></span>
           <span class="color-item"></span>
@@ -69,6 +74,11 @@
 export default {
   name: "ProductDetail",
   props: [],
+  computed: {
+    product(){
+      return this.$store.getters.products[0]
+    }
+  },
   methods: {
   }
 };
@@ -137,6 +147,8 @@ export default {
   cursor: pointer;
   background-clip: content-box; /*define the extent of background*/
   background-color: grey;
+  font-size: 10px;
+  color: #fff;
 }
 .color-item:hover{
   border-color: #f57224;

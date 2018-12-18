@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
       <div class="image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Music_01754.jpg" alt="Product">
+        <img :src="product.imageUrl" alt="Product">
       </div>
       <product-detail></product-detail>
       <shipping-info></shipping-info>
@@ -19,7 +19,12 @@ export default {
   components: {
     "product-detail": ProductDetail,
     "shipping-info": ShippingInfo
-  }
+  },
+  computed: {
+    product(){
+      return this.$store.getters.products[0]
+    }
+  },
 }
 </script>
 
