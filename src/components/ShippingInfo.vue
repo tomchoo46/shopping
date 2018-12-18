@@ -4,7 +4,7 @@
       <div class="flex-header">
         <span class="header-title vertical-center">Delivery Options</span>
         <span class="spacer"></span>
-        <span><i class="fas fa-info-circle" style="cursor: pointer"></i></span>
+        <i class="fas fa-info-circle" style="cursor: pointer"></i>
       </div>
       <div class="flex-container">
         <span><i class="fas fa-map-marker-alt left-icon"></i></span>
@@ -31,7 +31,7 @@
       <div class="flex-header">
         <span class="header-title">Return &amp; Warranty</span>
         <span class="spacer"></span>
-        <span><i class="fas fa-info-circle" style="cursor: pointer"></i></span>
+        <i class="fas fa-info-circle" style="cursor: pointer"></i>
       </div>  
       <div class="flex-container">
         <span><i class="fas fa-undo-alt left-icon"></i></span>
@@ -98,6 +98,9 @@ export default {
   display: flex;
   padding: 20px 16px 2px;
 }
+.flex-header i{
+  font-size: 15px;
+}
 .flex-container{
   display: flex;
   padding: 10px 16px;
@@ -113,9 +116,6 @@ export default {
   padding: 15px;
   justify-content: center;
   font-size: 13px;
-}
-.fas,.far{
-  font-size: 15px;
 }
 .left-icon{
   font-size: 18px;

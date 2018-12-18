@@ -2,15 +2,26 @@
   <div class="product">
     <h1 class="product-title">Kids Girls Chiffon Lace Princess Wedding Bridesmaid Pageant Party Formal Dresses</h1>
     <div class="rating">
-        <span class="star">5 stars</span><a href="#">22 Ratings</a>
+        <span class="star">
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </span>
+        <a href="#">22 Ratings</a>
         <span class="spacer"></span>
-        <i class="fas fa-share-alt"></i><i class="far fa-heart" style="marginLeft: 23px"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="far fa-heart" style="marginLeft: 23px"></i>
     </div>
     <div class="brand bottom-border">
         <span class="grey-text">Brand: </span><a>OEM</a><span>&nbsp;|&nbsp;</span><a>Girls from OEM</a>
     </div>
     <p class="price">RM53.00</p>
-    <p class="previous-price font-14 bottom-border"><span style="textDecoration: line-through" class="grey-text font-14">RM88.40</span> -40%</p>
+    <p class="previous-price font-14 bottom-border">
+      <span style="textDecoration: line-through" class="grey-text font-14">RM88.40</span> 
+      -40%
+    </p>
     <!-- color family -->
     <div class="flex-container">
       <div class="left-column font-14">Color Family</div>
@@ -80,15 +91,18 @@ export default {
   align-items: center;
   height: 29px;
 }
-.star{
-  margin-right: 5px;
-}
-.fas, .far{
+.rating > i{
   font-size: 18px;
   cursor: pointer;
 }
-.fas:hover, .far:hover{
+.rating > i:hover{
   color: #f57224;
+}
+.star{
+  margin-right: 5px;
+}
+.star i{
+  font-size: 10px;
 }
 .brand{
   line-height: 20px;
