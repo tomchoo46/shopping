@@ -149,6 +149,7 @@ export default {
 .rating > i{
   font-size: 18px;
   cursor: pointer;
+  color: #757575;
 }
 .rating > i:hover{
   color: #f57224;
