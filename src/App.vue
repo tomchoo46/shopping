@@ -27,13 +27,14 @@ export default {
 #app{
   background-color: #eff0f5;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 .container{
   width: 1188px;
   display: flex;
   margin: auto;
   background-color: white;
-  height: 100%;
 }
 .image{
   width: 330px;
