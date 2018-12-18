@@ -7,10 +7,10 @@
         <i class="fas fa-share-alt"></i><i class="far fa-heart" style="marginLeft: 23px"></i>
     </div>
     <div class="brand bottom-border">
-        <span class="text">Brand: </span><a>OEM</a><span>&nbsp;|&nbsp;</span><a>Girls from OEM</a>
+        <span class="grey-text">Brand: </span><a>OEM</a><span>&nbsp;|&nbsp;</span><a>Girls from OEM</a>
     </div>
     <p class="price">RM53.00</p>
-    <p class="previous-price font-14 bottom-border"><span style="textDecoration: line-through" class="text font-14">RM88.40</span> -40%</p>
+    <p class="previous-price font-14 bottom-border"><span style="textDecoration: line-through" class="grey-text font-14">RM88.40</span> -40%</p>
     <!-- color family -->
     <div class="flex-container">
       <div class="left-column font-14">Color Family</div>

@@ -16,15 +16,18 @@
         <span class="font-14">Ships from Overseas</span>
       </div>
       <div class="flex-container">
-        <span>icon</span>
+        <span><i class="fas fa-truck left-icon"></i></span>
         <div>
-          <p>Economy Delivery</p>
-          <p>7 - 24 days</p>
+          <p class="font-14">Economy Delivery</p>
+          <p class="grey-text">7 - 24 days</p>
         </div>
-        <span>RM5.20</span>
+        <span class="spacer"></span>
+        <span class="font-14">RM5.20</span>
       </div>
-      <div class="flex-container"><span>icon</span><span>Cash on Delivery not available</span></div>
-      <hr>
+      <div class="flex-container bottom-border">
+        <span><i class="far fa-money-bill-alt left-icon"></i></span>
+        <span class="font-14">Cash on Delivery not available</span>
+      </div>
       <div class="flex-header"><span class="header-title">Return &amp; Warranty</span><span>Icon</span></div>  
       <div class="flex-container">
         <span>icon</span>
