@@ -53,9 +53,9 @@
     <div class="flex-container">
       <div class="left-column font-14">Quantity</div>
       <div class="font-14">
-        <span>-</span>
-        <span>1</span>
-        <span>+</span>
+        <button class="btn btn-change-qty"><i class="fas fa-minus"></i></button>
+        <input class="order-qty" type="text" value="1" height="100%">
+        <button class="btn btn-change-qty"><i class="fas fa-plus"></i></button>
       </div>
     </div>
     <div>
@@ -155,27 +155,58 @@ export default {
   cursor: pointer;
 }
 .btn{
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  transition: all .3s ease-out;  
+  outline: 0;
+}
+.btn-buy{
   width: 225px;
   height: 44px;
   margin-right: 10px;
   margin-top: 8px;
-  text-align: center;
-  border: 0;
   color: white;
   font-size: 16px;
-  cursor: pointer;
-  transition: all .3s ease-out;  
-}
-.btn-buy{
   background-color: #ffb916;
 }
 .btn-buy:hover{
   background-color: #e59b11;
 }
 .btn-add-cart{
+  width: 225px;
+  height: 44px;
+  margin-right: 10px;
+  margin-top: 8px;
+  color: white;
+  font-size: 16px;
   background-color: #f57224;
 }
 .btn-add-cart:hover{
   background-color: #d0611e;
+}
+.btn-change-qty{
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  background-color: #eff0f5;
+}
+.btn-change-qty .fas{
+  color: #9e9e9e;
+}
+.btn-change-qty:hover{
+  background-color: #dadada;
+}
+.btn-change-qty:hover .fas{
+  color: #fff;
+}
+.btn-change-qty:focus{
+  border: 0;
+}
+.order-qty{
+  text-align: center;
+  border: 0;
+  width: 44px;
+  margin: 0 1px;
 }
 </style>
