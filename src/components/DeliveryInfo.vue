@@ -73,7 +73,6 @@ input{
   font-size: 14px;
   height: 40px;
   padding: 0 35px 0 10px;
-  margin-bottom: 2px;
   outline: none;  
   box-sizing: border-box;
   margin-bottom: 30px;  
