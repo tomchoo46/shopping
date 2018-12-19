@@ -40,6 +40,5 @@ export default {
 .right-container{
   width: 388px;
   margin-left: 12px;
-  background-color: white;
 }
 </style>
