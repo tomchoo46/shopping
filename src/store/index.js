@@ -17,7 +17,8 @@ export const store = new Vuex.Store({
         discount: 40,
         colorFamilies: ['Blue', 'Green', 'Red', 'Yellow'],
         sizes: ['7-8', '9-10', '11-12', '5-6', '3-4'],
-        store: 'MM88 Store'
+        store: 'MM88 Store',
+        shippingFee: 7.05
       }
     ],
     userData: {

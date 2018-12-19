@@ -2,9 +2,9 @@
   <div class="container">
     <div class="left-container">
       <delivery-info/>
-      <order-detail/>
+      <order-detail :product="product" :userData="userData"/>
     </div>
-    <order-summary class="right-container"/>
+    <order-summary class="right-container" :product="product" :userData="userData"/>
   </div>
 </template>
 
@@ -23,6 +23,9 @@ export default {
   computed: {
     product(){
       return this.$store.getters.products[0]
+    },
+    userData(){
+      return this.$store.getters.userData
     }
   }
 }

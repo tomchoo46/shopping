@@ -13,7 +13,7 @@
         <span class="spacer"></span>
         <div class="right-column">
           <p>#price</p>
-          <p>RM5.20</p>
+          <p>#shipping fee</p>
         </div>
       </div>
       <p>
@@ -36,7 +36,7 @@
 <script>
 export default {
   name: "OrderSummary",
-  props: [],
+  props: ['product', 'userData'],
   methods: {
   }
 };
