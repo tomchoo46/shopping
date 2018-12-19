@@ -29,8 +29,8 @@
           <div class="product-detail">
             <p class="font-14">{{product.title}}</p>
             <p style="marginTop: 8px;" class="label">
-              <span>{{product.brand}}</span>
-              <span>, Size:Int</span>
+              <span>{{product.brands[0]}}</span>
+              <span>, Size:Int:</span>
               <span>{{userData.selectedSize}}</span>
               <span>, Color Family:</span>
               <span>{{userData.selectedColor}}</span>

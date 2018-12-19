@@ -75,10 +75,10 @@
         </button>
       </div>
     </div>
-    <div>
-      <button class="btn btn-buy">Buy Now</button>
+    <form @submit.prevent="onBuyNow">
+      <button class="btn btn-buy" type="submit">Buy Now</button>
       <button class="btn btn-add-cart">Add to Cart</button>
-    </div>
+    </form>
   </div>
 </template>
 
@@ -118,6 +118,9 @@ export default {
         this.$store.dispatch('setOrderQty', 1)
         this.orderQty = 1
       }
+    },
+    onBuyNow(){
+      this.$router.push('/order')
     }
   }
 };

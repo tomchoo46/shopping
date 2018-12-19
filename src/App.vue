@@ -1,19 +1,13 @@
 <template>
   <div id="app">
-    <product-page v-if="false"/>
-    <order-page v-if="true"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ProductPage from './components/ProductPage.vue'
-import OrderPage from './components/OrderPage.vue'
-
 export default {
   name: 'app',
   components: {
-    "product-page": ProductPage,
-    "order-page": OrderPage
   },
   computed: {
   },
