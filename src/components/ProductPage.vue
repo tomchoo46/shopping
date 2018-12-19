@@ -3,8 +3,8 @@
     <div class="image">
       <img :src="product.imageUrl" alt="Product">
     </div>
-    <product-detail/>
-    <shipping-info/>
+    <product-detail :product="product" :userData="userData" />
+    <shipping-info :store="product.store"/>
   </div>
 </template>
 
@@ -21,6 +21,9 @@ export default {
   computed: {
     product(){
       return this.$store.getters.products[0]
+    },
+    userData(){
+      return this.$store.getters.userData
     }
   }
 }

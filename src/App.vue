@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <product-page v-if="false"/>
-    <order-page/>
+    <product-page v-if="true"/>
+    <order-page v-if="false"/>
   </div>
 </template>
 

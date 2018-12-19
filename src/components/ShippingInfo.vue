@@ -49,7 +49,7 @@
       <div class="seller bottom-border">
         <div>
           <p class="grey-text">Sold by</p>
-          <p class="store-name">MM88 Store</p>
+          <p class="store-name">{{store}}</p>
         </div>
         <span class="spacer"></span>
         <span class="chat">
@@ -81,7 +81,7 @@
 <script>
 export default {
   name: "ProductDetail",
-  props: [],
+  props: ['store'],
   methods: {
   }
 };

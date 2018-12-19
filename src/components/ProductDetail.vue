@@ -85,19 +85,13 @@
 <script>
 export default {
   name: "ProductDetail",
-  props: [],
+  props: ['product', 'userData'],
   data (){
     return{
       orderQty: 1 //use v-model to bind so that any input less than 1 can be resetted to 1
     }
   },
   computed: {
-    product(){
-      return this.$store.getters.products[0]
-    },
-    userData(){
-      return this.$store.getters.userData
-    }
   },
   created(){
     this.$store.dispatch('setProductColor', this.product.colorFamilies[0])  //initialize first color of product
