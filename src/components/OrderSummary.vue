@@ -7,13 +7,13 @@
       <p class="title">Order Summary</p>
       <div class="subtotal">
         <div class="left-column">
-          <p>Subtotal (1 items)</p>
+          <p>Subtotal ({{userData.orderQty}} items)</p>
           <p>Shipping Fee</p>
         </div>
         <span class="spacer"></span>
         <div class="right-column">
-          <p>#price</p>
-          <p>#shipping fee</p>
+          <p>RM{{subtotal | decimal}}</p>
+          <p>RM{{product.shippingFee}}</p>
         </div>
       </div>
       <p>
@@ -23,7 +23,7 @@
       <div class="total-container">
         <span class="font-14">Total</span>
         <span class="spacer"></span>
-        <span class="total-price">#totalPrice</span>
+        <span class="total-price">RM{{total | decimal}}</span>
       </div>
       <p style="textAlign: right;">0% GST</p>
       <div class="btn-btm">
@@ -38,6 +38,14 @@ export default {
   name: "OrderSummary",
   props: ['product', 'userData'],
   methods: {
+  },
+  computed:{
+    subtotal(){
+      return this.product.price * this.userData.orderQty
+    },
+    total(){
+      return this.subtotal + this.product.shippingFee
+    }
   }
 };
 </script>
