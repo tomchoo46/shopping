@@ -2,9 +2,9 @@
   <div class="container">
     <div class="left-container">
       <delivery-info/>
-      <order-detail :product="product" :userData="userData"/>
+      <order-detail :product="products[0]" :userData="userData"/>
     </div>
-    <order-summary class="right-container" :product="product" :userData="userData"/>
+    <order-summary class="right-container" :product="products[0]" :userData="userData"/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@
 import DeliveryInfo from './DeliveryInfo.vue'
 import OrderDetail from './OrderDetail.vue'
 import OrderSummary from './OrderSummary.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'app',
@@ -21,12 +22,10 @@ export default {
     "order-summary": OrderSummary
   },
   computed: {
-    product(){
-      return this.$store.getters.products[0]
-    },
-    userData(){
-      return this.$store.getters.userData
-    }
+    ...mapGetters([
+      'products',
+      'userData'
+    ])
   }
 }
 </script>

@@ -83,6 +83,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: "ProductDetail",
   props: ['product', 'userData'],
@@ -94,28 +96,33 @@ export default {
   computed: {
   },
   created(){
-    this.$store.dispatch('setProductColor', this.product.colorFamilies[0])  //initialize first color of product
-    this.$store.dispatch('setProductSize', this.product.sizes[0])  //initialize first size of product
+    this.setProductColor(this.product.colorFamilies[0])  //initialize first color of product
+    this.setProductSize(this.product.sizes[0])  //initialize first size of product
   },
   methods: {
+    ...mapActions([
+      'setProductColor',
+      'setProductSize',
+      'setOrderQty'
+    ]),
     selectColor(color){
-      this.$store.dispatch('setProductColor', color)
+      this.setProductColor(color)
     },
     isSelectedColor(color){
       return color === this.userData.selectedColor ? { borderColor: '#f57224' } : null
     },
     selectSize(size){
-      this.$store.dispatch('setProductSize', size)
+      this.setProductSize(size)
     },
     isSelectedSize(size){
       return size === this.userData.selectedSize ? { borderColor: '#f57224' } : null
     },
     changeOrderQty(qty){
       if (qty > 0){
-        this.$store.dispatch('setOrderQty', qty)
+        this.setOrderQty(qty)
         this.orderQty = this.userData.orderQty
       } else { //if input less than 1, reset orderQty to 1
-        this.$store.dispatch('setOrderQty', 1)
+        this.setOrderQty(1)
         this.orderQty = 1
       }
     },

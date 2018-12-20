@@ -1,16 +1,17 @@
 <template>
   <div class="container">
     <div class="image">
-      <img :src="product.imageUrl" alt="Product">
+      <img :src="products[0].imageUrl" alt="Product">
     </div>
-    <product-detail :product="product" :userData="userData" />
-    <shipping-info :store="product.store"/>
+    <product-detail :product="products[0]" :userData="userData" />
+    <shipping-info :store="products[0].store"/>
   </div>
 </template>
 
 <script>
 import ProductDetail from './ProductDetail.vue'
 import ShippingInfo from './ShippingInfo.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'app',
@@ -19,12 +20,10 @@ export default {
     "shipping-info": ShippingInfo
   },
   computed: {
-    product(){
-      return this.$store.getters.products[0]
-    },
-    userData(){
-      return this.$store.getters.userData
-    }
+    ...mapGetters([
+      'products',
+      'userData'
+    ])
   }
 }
 </script>
