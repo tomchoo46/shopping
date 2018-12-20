@@ -35,8 +35,8 @@
         <div class="selection-list">
           <span class="color-item" 
             :style="isSelectedColor(color)"
-            v-for="color in product.colorFamilies" 
-            :key="color"
+            v-for="(color, index) in product.colorFamilies" 
+            :key="index"
             @click="selectColor(color)">{{color}}</span>
         </div>
       </div>
@@ -49,8 +49,8 @@
         <div class="selection-list">
           <div class="size-item" 
             :style="isSelectedSize(size)"
-            v-for="size in product.sizes" 
-            :key="size"
+            v-for="(size, index) in product.sizes" 
+            :key="index"
             @click="selectSize(size)"><p>{{size}} yrs</p></div>
         </div>
       </div>
